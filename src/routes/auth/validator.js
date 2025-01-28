@@ -10,6 +10,10 @@ module.exports = new (class {
     ];
   }
   loginValidator() {
-    return[];
+    return [
+      check("email").isEmail().withMessage("email invalid"),
+      check("name").not().isEmpty().withMessage("name is required"),
+      check("password").not().isEmpty().withMessage("password is required"),
+    ];
   }
 })();

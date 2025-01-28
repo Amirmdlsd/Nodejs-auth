@@ -4,7 +4,7 @@ const controller = require("./controller");
 
 router.get(
   "/",
-  controller.dashbord
+  controller.dashboard
 );
 router.get(
   "/me",
